@@ -1,6 +1,8 @@
 # Daily Server Log Scan Pipeline
 
-A polished Python portfolio project that combines a Supabase-backed server log pipeline, Claude AI reasoning, and a Streamlit dashboard for interactive anomaly review.
+An automated Data Engineering pipeline that replaces manual log analysis with AI-driven anomaly detection. It extracts daily metrics from a PostgreSQL database, leverages Claude 3.5 Sonnet to identify statistical outliers, and surfaces actionable insights via a live Streamlit dashboard.
+
+![Streamlit Dashboard showing Claude Anomaly Report](images/dashboard.png)
 
 ## Architecture Overview
 
@@ -59,5 +61,3 @@ This repository can be extended into a fully automated daily scan using GitHub A
 - The `optional_deployment/daily_scan_template.yml` file contains a daily cron workflow.
 - Add GitHub Secrets for `SUPABASE_URL`, `SUPABASE_KEY`, and `ANTHROPIC_API_KEY` in your repository settings.
 - Once enabled, the workflow can run `pipeline.py` every day and provide unattended anomaly monitoring.
-
-> Note: This optional automation step is ideal for portfolio demonstration and production-style deployment without exposing secrets in source control.
